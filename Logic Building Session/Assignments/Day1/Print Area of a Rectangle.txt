@@ -1,0 +1,13 @@
+//WAP for Print Area of Square.
+class Area{
+	public static void main(String args[]){
+	int side=10;
+	int ar=side*side;
+	System.out.println("Area of Square="+ar);
+
+	
+		
+}
+}
+
+

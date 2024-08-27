@@ -1,0 +1,292 @@
+//Write a program to check no. is positive or negative.
+class Demo1{
+	public static void main(String args[]){
+	int n=10;
+
+	if(n>0){
+			System.out.println("The No. is Positive.");
+		}
+	else{
+			System.out.println("The No. is Negative.");
+		
+}
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public class PositiveNumberCheck {
+    public static void main(String[] args) {
+        int number = 10;  // Predefined number
+        
+        if (number > 0) {
+            System.out.println("The number is positive.");
+        } else {
+            System.out.println("The number is not positive.");
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public class NegativeNumberCheck {
+    public static void main(String[] args) {
+        int number = -5;  // Predefined number
+        
+        if (number < 0) {
+            System.out.println("The number is negative.");
+        } else {
+            System.out.println("The number is not negative.");
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public class OddEvenCheck {
+    public static void main(String[] args) {
+        int number = 7;  // Predefined number
+        
+        if (number % 2 == 0) {
+            System.out.println("The number is even.");
+        } else {
+            System.out.println("The number is odd.");
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public class GoodMorningMessage {
+    public static void main(String[] args) {
+        int time = 10;  // Predefined time in 24-hour format
+        
+        if (time >= 5 && time < 12) {
+            System.out.println("Good Morning!");
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public class AreaOfSquare {
+    public static void main(String[] args) {
+        int side = 4;  // Predefined side length
+        
+        int area = side * side;
+        System.out.println("Area of the square: " + area);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public class AreaOfRectangle {
+    public static void main(String[] args) {
+        int length = 5;  // Predefined length
+        int width = 3;   // Predefined width
+        
+        int area = length * width;
+        System.out.println("Area of the rectangle: " + area);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public class LargestOfThree {
+    public static void main(String[] args) {
+        int num1 = 25;  // Predefined numbers
+        int num2 = 42;
+        int num3 = 37;
+        
+        if (num1 >= num2 && num1 >= num3) {
+            System.out.println("The largest number is: " + num1);
+        } else if (num2 >= num1 && num2 >= num3) {
+            System.out.println("The largest number is: " + num2);
+        } else {
+            System.out.println("The largest number is: " + num3);
+        }
+    }
+}

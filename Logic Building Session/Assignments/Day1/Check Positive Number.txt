@@ -1,0 +1,14 @@
+//Write a program to find Odd or Even no.
+class Odd{
+	public static void main(String args[]){
+	int n=10;
+
+	if(n%2==0){
+			System.out.println("The No. is Even.");
+		}
+	else{
+			System.out.println("The No. is Odd.");
+		
+}
+}
+}

@@ -1,0 +1,14 @@
+//8. Write a program to count down from 10 to 0, printing each number.
+
+public class Count{
+
+	public static void main(String args[]){
+	
+				int num=0;
+				
+				for (int i=10; i>=0; i--)
+				{
+					System.out.println("Count Down from 10 to 0 = " +i);
+				}
+			}
+		}

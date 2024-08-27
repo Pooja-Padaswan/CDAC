@@ -1,0 +1,21 @@
+
+
+
+
+
+
+
+	public class Pattern2 {
+    public static void main(String[] args) {
+        // Upper part of the pattern
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(i);  // Print the number
+                if (j < i) {
+                    System.out.print("*");  // Print asterisk if it's not the last number in the row
+                }
+            }
+            System.out.println();  // Move to the next line
+        }
+	}
+	}

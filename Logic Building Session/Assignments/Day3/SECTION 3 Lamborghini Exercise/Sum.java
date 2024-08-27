@@ -1,0 +1,25 @@
+//7. Write a program to calculate the sum of the digits of the number 9876. 
+//The output should be 30 (9 + 8 + 7 + 6).
+		public class Sum{
+			public static void main(String args[]){
+			
+			
+			int num1 = 9;
+			int num2=8;
+			 int num3 = 7;
+			 int num4 =6;
+			int count =0;
+			
+			for(int i=6; i<=9; i++)
+				{
+					count +=i;
+				}
+					
+					System.out.println(count + " (" + num1 + " + " + num2 + " + " + num3 + " + " + num4 + ")" );
+
+			
+			}
+		}
+		
+		//Output C:\Users\pooja\Desktop\AUG24-CDAC\Day3-CDAC\SECTION 2 Guess the Output>java Sum
+      //     30 (9 + 8 + 7 + 6 )

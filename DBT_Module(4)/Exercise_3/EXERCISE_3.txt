@@ -1,0 +1,64 @@
+
+SQL Exercise 3
+
+
+2. Display all the Supplier names in upper case.
+
+mysql> select upper(Sname) from SUPPLIER;
++--------------+
+| upper(Sname) |
++--------------+
+| POOJA        |
+| PRITI        |
+| PRIYA        |
++--------------+
+3 rows in set (0.01 sec)
+
+----------------------------------------------------------------------
+
+3. Display all the Supplier names in lower case.
+mysql> select lower(Sname) from SUPPLIER;
++--------------+
+| lower(Sname) |
++--------------+
+| pooja        |
+| priti        |
+| priya        |
++--------------+
+3 rows in set (0.00 sec)
+---------------------------------------------------------------------------------------
+
+4. Display all the Supplier names padded to 25 characters, with spaces on the left.
+----------------------------------------------------------------------------------------------------------
+
+5. Display all the Supplier names (with ‘la’ replaced by ‘ro’).
+HINT: REPLACE.
+
+mysql> select replace(Sname, 'la', 'ro') from supplier;
++----------------------------+
+| replace(Sname, 'la', 'ro') |
++----------------------------+
+| Pooja                      |
+| Priti                      |
+| Priya                      |
++----------------------------+
+
+-----------------------------------------------------------------------------------------------------
+
+6. Implement the above command such that ‘l’ is replaced with ‘r’ and ‘a’ is replaced with ‘o’.
+
+mysql> select replace(replace(Sname, 'l', 'r'), 'a', 'o') from supplier;
++---------------------------------------------+
+| replace(replace(Sname, 'l', 'r'), 'a', 'o') |
++---------------------------------------------+
+| Poojo                                       |
+| Priti                                       |
+| Priyo                                       |
++---------------------------------------------+
+3 rows in set (0.00 sec)
+
+
+7.Display the Supplier names and the lengths of the names.
+8. Use the soundex function to search for a supplier by the name of ‘BLOKE’.
+9. Display the Supplier name and the status (as Ten, Twenty, Thirty, etc.).
+10. Display the current day (e.g. Thursday).

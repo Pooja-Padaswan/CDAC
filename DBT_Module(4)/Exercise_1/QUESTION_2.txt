@@ -1,0 +1,7 @@
+SQL Exercise 1
+2. Create the table SDEPT with the following structure:-
+DEPTNO CHAR(2)
+DEPTNAME CHAR(15)
+
+mysql> create table SDEPT(DEPTNO CHAR(2), DEPTNAME CHAR(15));
+Query OK, 0 rows affected (0.02 sec)

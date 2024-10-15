@@ -1,0 +1,27 @@
+4. Insert into the SEMP table the following values:-
+0001, SUNIL, 6000, 10
+0002, HIREN, 8000, 20
+0003, ALI, 4000, 10, 0001
+0004, GEORGE, 6000, 0002
+
+mysql> INSERT INTO SEMP values(0001,'SUNIL', 6000, 10, NULL);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO SEMP values(0002,'HIREN', 8000, 20, NULL);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO SEMP values(0003,'ALI', 4000, 10, 0001);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO SEMP values(0004,'GEORGE', 6000, NULL, 0002);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> SELECT * FROM SEMP;
++-------+---------+-------+--------+----------+
+| EMPNO | EMPNAME | BASIC | DEPTNO | DEPTHEAD |
++-------+---------+-------+--------+----------+
+| 1     | SUNIL   |  6000 | 10     | NULL     |
+| 2     | HIREN   |  8000 | 20     | NULL     |
+| 3     | ALI     |  4000 | 10     | 1        |
+| 4     | GEORGE  |  6000 | NULL   | 2        |
++-------+---------+-------+--------+----------+

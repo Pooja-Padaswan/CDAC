@@ -1,0 +1,242 @@
+Create S, P, J, SPJ tables as specified below and insert a few rows in each table:-
+SUPPLIER
+(S#, Sname, Status, City)
+-
+S
+PARTS
+(P#, Pname, Color, Weight, City)
+-
+P
+PROJECTS
+(J#, Jname, City)
+-
+J
+SUPPLIER-PARTS-PROJECT
+(S#, P#, J#, Qty)
+-
+SPJ
+Sample data for S# column:- ‘S1’, ‘S2’, ‘S3’, etc.
+Sample data for P# column:- ‘P1’, ‘P2’, ‘P3’, etc.
+Sample data for J# column:- ‘J1’, ‘J2’, ‘J3’, etc.
+Sample data for Status column:- 10, 20, 30, etc.
+--------------------------------------------------------------------------------------------
+ create table SUPPLIER(Sname varchar(20), Status varchar(20), City varchar(30));
+  ALTER TABLE SUPPLIER ADD `S#` VARCHAR(5);
+  
+  
+mysql> select * from SUPPLIER;
+Empty set (0.01 sec)
+
+mysql> DESCRIBE SUPPLIER;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| Sname  | varchar(20) | YES  |     | NULL    |       |
+| Status | varchar(20) | YES  |     | NULL    |       |
+| City   | varchar(30) | YES  |     | NULL    |       |
+| S#     | varchar(5)  | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+
+ INSERT INTO SUPPLIER (`S#`, Sname, Status, City) VALUES
+    -> ('S1', 'Supplier A', 10, 'Mumbai'),
+    -> ('S2', 'Supplier B', 20, 'Delhi'),
+    -> ('S3', 'Supplier C', 30, 'Chennai');
+Query OK, 3 rows affected (0.01 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select * from SUPPLIER;
++------------+--------+---------+------+
+| Sname      | Status | City    | S#   |
++------------+--------+---------+------+
+| Supplier A | 10     | Mumbai  | S1   |
+| Supplier B | 20     | Delhi   | S2   |
+| Supplier C | 30     | Chennai | S3   |
+| Pooja      | 10     | Mumbai  | S1   |
+| Priti      | 20     | Delhi   | S2   |
+| Priya      | 30     | Chennai | S3   |
++------------+--------+---------+------+
+6 rows in set (0.00 sec)
+
+mysql> DELETE FROM SUPPLIER WHERE Sname = 'Supplier A';
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from SUPPLIER;
++------------+--------+---------+------+
+| Sname      | Status | City    | S#   |
++------------+--------+---------+------+
+| Supplier B | 20     | Delhi   | S2   |
+| Supplier C | 30     | Chennai | S3   |
+| Pooja      | 10     | Mumbai  | S1   |
+| Priti      | 20     | Delhi   | S2   |
+| Priya      | 30     | Chennai | S3   |
++------------+--------+---------+------+
+5 rows in set (0.00 sec)
+
+mysql> DELETE FROM SUPPLIER WHERE Sname = 'Supplier b';
+Query OK, 1 row affected (0.01 sec)
+
+mysql> DELETE FROM SUPPLIER WHERE Sname = 'Supplier C';
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from SUPPLIER;
++-------+--------+---------+------+
+| Sname | Status | City    | S#   |
++-------+--------+---------+------+
+| Pooja | 10     | Mumbai  | S1   |
+| Priti | 20     | Delhi   | S2   |
+| Priya | 30     | Chennai | S3   |
++-------+--------+---------+------+
+
+---------------------------------------------------------------------------------
+ create table PARTS(P varchar(20), Pname varchar(20), Color varchar(20), Weight float, City varchar(20));
+Query OK, 0 rows affected (0.02 sec)
+
+
+mysql> INSERT INTO PARTS (P, Pname, Color, Weight, City) VALUES ('P1', 'Button', 'Red', 2.50, 'Mumbai'), ('P2', 'Screw', 'Blue', 1.20, 'Pune'), ('P3', 'Nut'
+, 'Black', 0.80, 'Delhi');
+
+
+
+mysql> create table PARTS(P varchar(20), Pname varchar(20), Color varchar(20), Weight float, City varchar(20));
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> select * from PARTS;
++------+--------+-------+--------+--------+
+| P    | Pname  | Color | Weight | City   |
++------+--------+-------+--------+--------+
+| P1   | Button | Red   |    2.5 | Mumbai |
+| P2   | Screw  | Blue  |    1.2 | Pune   |
+| P3   | Nut    | Black |    0.8 | Delhi  |
++------+--------+-------+--------+--------+
+3 rows in set (0.00 sec)
+
+
+mysql> CREATE TABLE SUPPLIER_PARTS_PROJECT (S VARCHAR(5), P VARCHAR(5), J VARCHAR(5), Qty INT);
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> INSERT INTO SUPPLIER_PARTS_PROJECT (S, P, J, Qty) VALUES ('S1', 'P1', 'J1', 100), ('S2', 'P2', 'J2', 200), ('S3', 'P3', 'J3', 150), ('S4', 'P4', 'J4', 80), ('S5', 'P5', 'J5', 120);
+Query OK, 5 rows affected (0.01 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM SUPPLIER_PARTS_PROJECT;
++------+------+------+------+
+| S    | P    | J    | Qty  |
++------+------+------+------+
+| S1   | P1   | J1   |  100 |
+| S2   | P2   | J2   |  200 |
+| S3   | P3   | J3   |  150 |
+| S4   | P4   | J4   |   80 |
+| S5   | P5   | J5   |  120 |
++------+------+------+------+
+
+-------------------------------------------------------------------------------------------
+
+mysql> CREATE TABLE PROJECTS (J VARCHAR(5), Jname VARCHAR(50), City VARCHAR(50));
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> INSERT INTO PROJECTS ((J, Jname, City) VALUES ('J1', 'Project1', 'Mumbai'), ('J2', 'Project2', 'Delhi'), ('J3','Project1','Bangalore'));
+
+
+
+mysql> SELECT * FROM PROJECTS;
++------+----------+-----------+
+| J    | Jname    | City      |
++------+----------+-----------+
+| J1   | Project1 | Mumbai    |
+| J2   | Project2 | Delhi     |
+| J3   | Project1 | Bangalore |
++------+----------+-----------+
+3 rows in set (0.00 sec)
+
+--------------------------------------------------------------------------
+
+Write the SELECT queries to do the following:-
+5. Display all the data from the S table.
+mysql> select * from SUPPLIER;
++-------+--------+---------+------+
+| Sname | Status | City    | S#   |
++-------+--------+---------+------+
+| Pooja | 10     | Mumbai  | S1   |
+| Priti | 20     | Delhi   | S2   |
+| Priya | 30     | Chennai | S3   |
++-------+--------+---------+------+
+-------------------------------------------------------
+
+6. Display only the S# and SNAME fields from the S table.
+mysql> SELECT 'S#', Sname FROM SUPPLIER;
++----+-------+
+| S# | Sname |
++----+-------+
+| S# | Pooja |
+| S# | Priti |
+| S# | Priya |
++----+-------+
+---------------------------------------------------------------
+
+7. Display the PNAME and COLOR from the P table for the CITY=”London”.
+mysql> SELECT Pname, Color FROM PARTS WHERE City = 'London';
+Empty set (0.00 sec)
+--------------------------------------------------------------------
+
+8. Display all the Suppliers from London.
+
+mysql> SELECT * FROM SUPPLIER WHERE City = 'London';
+Empty set (0.00 sec)
+---------------------------------------------------------------
+9. Display all the Suppliers from Paris or Athens.
+mysql> SELECT * FROM SUPPLIER WHERE City IN ('Paris', 'Athens');
+Empty set (0.00 sec)
+
+-------------------------------------------------------------
+10. Display all the Projects in Athens.
+mysql> SELECT * FROM PROJECTS WHERE City = 'Athens';
+Empty set (0.00 sec)
+-------------------------------------------------------------------
+
+11. Display all the Partnames with the weight between 12 and 14 (inclusive of both).
+mysql> SELECT Pname FROM PARTS WHERE Weight BETWEEN 12 AND 14;
+Empty set (0.00 sec)
+
+mysql> SELECT * FROM SUPPLIER WHERE Status >= 20;
++-------+--------+---------+------+
+| Sname | Status | City    | S#   |
++-------+--------+---------+------+
+| Priti | 20     | Delhi   | S2   |
+| Priya | 30     | Chennai | S3   |
++-------+--------+---------+------+
+2 rows in set (0.00 sec)
+---------------------------------------------------------------------
+12. Display all the Suppliers with a Status greater than or equal to 20.
+mysql> SELECT * FROM SUPPLIER WHERE Status >= 20;
++-------+--------+---------+------+
+| Sname | Status | City    | S#   |
++-------+--------+---------+------+
+| Priti | 20     | Delhi   | S2   |
+| Priya | 30     | Chennai | S3   |
++-------+--------+---------+------+
+------------------------------------------------------------------------
+13. Display all the Suppliers except the Suppliers from London.
+
+mysql> SELECT * FROM SUPPLIER WHERE City <> 'London';
++-------+--------+---------+------+
+| Sname | Status | City    | S#   |
++-------+--------+---------+------+
+| Pooja | 10     | Mumbai  | S1   |
+| Priti | 20     | Delhi   | S2   |
+| Priya | 30     | Chennai | S3   |
++-------+--------+---------+------+
+In SQL, the <> operator is used to indicate "not equal to.
+----------------------------------------------------------------------
+
+14. Display only the Cities from where the Suppliers come from.
+mysql> SELECT DISTINCT City FROM SUPPLIER;
++---------+
+| City    |
++---------+
+| Mumbai  |
+| Delhi   |
+| Chennai |
++---------+
+3 rows in set (0.00 sec)
+-----------------------------------------------------------------------------------
+15. Assuming that the Part Weight is in GRAMS, display the same in MILLIGRAMS and KILOGRAMS.

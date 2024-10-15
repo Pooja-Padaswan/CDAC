@@ -1,0 +1,16 @@
+3. Insert into the SDEPT table the following values:-
+10, Development
+20, Training
+
+mysql> INSERT INTO SDEPT (DEPTNO , DEPTNAME) VALUES(10, 'Development'), (20, 'Training');
+Query OK, 2 rows affected (0.01 sec)
+
+    -> ^C
+mysql> select * from SDEPT;
++--------+-------------+
+| DEPTNO | DEPTNAME    |
++--------+-------------+
+| 10     | Development |
+| 20     | Training    |
++--------+-------------+
+2 rows in set (0.00 sec)

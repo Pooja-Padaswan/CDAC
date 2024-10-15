@@ -1,0 +1,11 @@
+SQL Exercise 1
+1. Create the table SEMP with the following structure:-
+EMPNO CHAR(4)
+EMPNAME CHAR(20)
+BASIC FLOAT
+DEPTNO CHAR(2)
+DEPTHEAD CHAR(4)
+
+
+mysql> create table SEMP  (EMPNO CHAR(4), EMPNAME CHAR(20), BASIC FLOAT, DEPTNO CHAR(2), DEPTHEAD CHAR(4));
+Query OK, 0 rows affected (0.07 sec)

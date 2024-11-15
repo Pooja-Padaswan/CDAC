@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-4</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h1>Assignment-3</h1>
+        <a id="colorChangeLink" href="#">Click here</a>
+        <p id="text">
+            "Believe you can and you're halfway there." — <strong>Theodore Roosevelt</strong><br>
+            This quote means having <strong>confidence</strong> in yourself and believing you can achieve 
+            something is already a big step toward <strong>success</strong>. Your <strong>mindset</strong> and positive thinking 
+            can make the challenge feel easier, and you're already closer to achieving your goal 
+            just by believing you can do it.
+        </p>
+      
+    </div>
+
+    <script>
+        // Function to change color of bold words
+        function changeBoldColor() {
+            const paragraph = document.getElementById('text');
+            const boldWords = paragraph.querySelectorAll('strong');
+
+            // Toggle the color of the bold words
+            boldWords.forEach(word => {
+                if (word.style.color === 'red') {
+                    word.style.color = ''; // Reset to original color
+                } else {
+                    word.style.color = 'red'; // Change to red
+                }
+            });
+        }
+
+        // Add event listener to the link
+        const link = document.getElementById('colorChangeLink');
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default link behavior
+            changeBoldColor(); // Call the function to change color
+        });
+    </script>
+</body>
+</html>

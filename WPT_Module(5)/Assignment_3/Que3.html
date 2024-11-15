@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-3</title>
+    <link rel="stylesheet" href="style2.css"> <!-- Optional: link to your CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h1>Remove Stationery </h1>
+        <select id="itemDropdown">
+            <option value="Pencil">Pencil</option>
+            <option value="Pen">Pen</option>
+            <option value="Notebook">Notebook</option>
+            <option value="Eraser">Eraser</option>
+            <option value="Marker">Marker</option>
+            <option value="Highlighter">Highlighter</option>
+            <option value="Stapler">Stapler</option>
+        </select>
+        <button onclick="removeItem()">Remove</button>
+        
+        <div class="output" id="output"></div>
+    </div>
+
+    <script>
+        function removeItem() {
+            // Get the dropdown element
+            var dropdown = document.getElementById('itemDropdown');
+            
+            // Get the selected index
+            var selectedIndex = dropdown.selectedIndex;
+
+            // Check if an item is selected
+            if (selectedIndex !== -1) {
+                // Remove the selected item
+                var removedItem = dropdown.value; // Store the value to display later
+                dropdown.remove(selectedIndex);
+                
+               
+            } 
+        }
+    </script>
+</body>
+</html>

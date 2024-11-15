@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-2</title>
+    <link rel="stylesheet" href="style1.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <div >
+        <h1>Contact Form</h1>
+        <form id="contactForm">
+            <label for="firstName">First Name:</label><br>
+            <input type="text" id="firstName" required><br><br>
+
+            <label for="lastName">Last Name:</label><br>
+            <input type="text" id="lastName" required><br><br>
+
+            <label for="contactNo">Contact No:</label><br>
+            <input type="tel" id="contactNo" required><br><br>
+
+            <label for="email">Email ID:</label><br>
+            <input type="email" id="email" required><br><br>
+
+            <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+        <div class="output" id="output"></div>
+    </div>
+
+    <script>
+        function submitForm() {
+            // Get the values from the form
+            var firstName = document.getElementById('firstName').value;
+            var lastName = document.getElementById('lastName').value;
+            var contactNo = document.getElementById('contactNo').value;
+            var email = document.getElementById('email').value;
+
+            // Display the values on the browser page
+            var outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = "<h2>Form Values:</h2>" +
+                "<p>First Name: " + firstName + "</p>" +
+                "<p>Last Name: " + lastName + "</p>" +
+                "<p>Contact No: " + contactNo + "</p>" +
+                "<p>Email ID: " + email + "</p>";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div >
+        <h1>Assignment-3</h1>
+        <p id="myParagraph">"Big things have small beginning. Every pro was once an amateur. Every expert was once a beginner. Little by little, a little becomes a lot. "
+
+            This quote by Jim Kwik means that starting small is important and that growth and success occur gradually. It means that every significant achievement or successful person began from humble beginnings. No one is born with expertise, everyone starts as a beginner, learning and improving over time.
+            
+            The phrase "little by little, a little becomes a lot" signifies that small, consistent efforts accumulate over time, leading to significant progress. It serves as a reminder that patience and persistence are essential, even minor actions can lead to great outcomes if we remain committed and continue to build on our experiences</p>
+        <button id="submitButton">Submit</button>
+    </div>
+
+    <script>
+        // JavaScript function to change paragraph style
+        document.getElementById("submitButton").onclick = function() {
+            var paragraph = document.getElementById("myParagraph");
+            paragraph.style.color = "Purple"; // Change text color to blue
+            paragraph.style.fontSize = "15px"; // Change font size to 20px
+            paragraph.style.fontWeight = "bold"; // Make the text bold
+            paragraph.style.fontFamily = 'Lato, sans-serif';
+            paragraph.style.backgroundColor = "lightyellow"; // Change background color
+            paragraph.style.padding = "10px"; // Add some padding
+        };
+    </script>
+</body>
+</html>

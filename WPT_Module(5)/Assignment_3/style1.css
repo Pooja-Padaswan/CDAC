@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4; /* Light grey background */
+}
+
+
+
+h1 {
+    text-align: center; /* Center the heading */
+}
+
+button {
+    margin-top: 10px; /* Space between paragraph and button */
+    padding: 10px 15px;
+    background-color: #3ccaab; /* Button background */
+    color: white; /* White text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Change cursor on hover */
+}
+
+button:hover {
+    background-color: #7ab3f0; /* Darker blue on hover */
+}
+
+.output {
+    margin-top: 20px; /* Space above output */
+    padding: 10px;
+    background-color: #e8f5e9; /* Light green background for output */
+    border-radius: 5px; /* Rounded corners */
+}

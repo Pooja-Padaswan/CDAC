@@ -1,0 +1,9 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+a {
+    color: blue; /* Link color */
+    cursor: pointer; /* Pointer cursor on hover */
+}

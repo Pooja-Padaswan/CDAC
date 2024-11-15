@@ -1,0 +1,385 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Wrapper Styling */
+.wrapper {
+    background: url('img1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+/* Custom height for product page only */
+.products .wrapper {
+    height: 160vh; /* Custom height for product page */
+}
+
+/* Navbar Styling */
+.navbar {
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo {
+    width: 170px;
+    padding-left: 100px;
+}
+
+.navbar ul {
+    display: flex;
+    margin-right: 50px;
+}
+
+.navbar ul li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    font-size: 20px;
+    color: bisque;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background 0.4s;
+}
+
+.navbar ul li a.active,
+.navbar ul li a:hover {
+    background: rgb(213, 127, 127);
+    border-radius: 5px;
+}
+
+/* Center Content Styling */
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    user-select: none;
+}
+
+.center h1, 
+.center h2 {
+    color: white;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.center h1 {
+    font-size: 50px; /* Reduce size of h1 */
+}
+
+.center h2 {
+    font-size: 28px; /* Reduce size of h2 */
+}
+
+
+
+/* Buttons Styling */
+.buttons {
+    margin-top: 30px;
+}
+
+.buttons button {
+    height: 50px;
+    width: 90px;
+    font-size: 18px;
+    font-weight: 60px;
+    color: #dfeb7f;
+    background: rgb(87, 129, 158);
+    border: 1px solid #b6a4a4;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.4s;
+    margin: 0 10px;
+}
+
+.buttons button:hover {
+    background: transparent;
+}
+p {
+    color: white; /* Set paragraph text color to white */
+    line-height: 1.6; /* Increase line height for better readability */
+    margin: 10px 0; /* Margin between paragraphs */
+}
+/* Product Styles */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 5px;
+    margin-top: 10px; /* Adjust to avoid overlap with the navbar */
+}
+
+.product {
+    background: transparent; /* Adjust if needed */
+    border: 1px solid transparent; /* Adjust if needed */
+    border-radius: 5px; /* Adjust if needed */
+    width: calc(24% - 12px);
+    margin: 10px;
+    text-align: center;
+    padding: 5px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.product:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.product img {
+    max-width: 70%;
+    height: auto;
+}
+
+.product h3 {
+    margin: 5px 0;
+}
+
+.product p {
+    color: #ff4081; /* Adjust color if needed */
+}
+.product-list {
+    background-color: rgba(249, 244, 244, 0.5); /* Optional: background for contrast */
+    padding: 20px; /* Optional: padding around the list */
+    border-radius: 10px; /* Optional: rounded corners */
+    max-width: 600px; /* Optional: max width for the list */
+    margin: auto; /* Center the list on the page */
+    color: #ca2828;
+}
+
+.product-item {
+    color: white; /* Set text color to white */
+    font-size: 18px; /* Adjust font size */
+    margin: 10px 0; /* Spacing between items */
+}
+
+
+
+/* Order Page Styles */
+.order-container {
+    background-color: transparent; /* White background with some transparency */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(185, 222, 39, 0.2); /* Subtle shadow for depth */
+    max-width: 400px; /* Max width for the form */
+    margin: 10px auto; /* Center horizontally */
+
+    /* Position at the bottom */
+    position: absolute;
+    bottom: 70px;  /* Adjust this value to move it up */
+    left: 50%;  /* Center horizontally */
+    transform: translateX(-50%);  /* Adjust for perfect centering */
+}
+
+.order-container h1 {
+    color: #f8f5f5; /* Darker color for headings */
+    margin-top: 20px;
+    margin-bottom: 10px; /* Space below the heading */
+    text-align: center; /* Center the text */
+}
+
+.order-container p {
+    color: #eceaf5; /* Grey color for the paragraph */
+    margin-bottom: 1px; /* Space below the paragraph */
+    text-align: center; /* Center the text */
+}
+
+.order-form {
+    display: flex;
+    flex-direction: column; /* Stack the inputs vertically */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Space between form groups */
+}
+
+label {
+    font-weight: bold; /* Bold labels */
+    margin-bottom: 5px; /* Space below labels */
+    display: block; /* Block display for labels */
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    padding: 10px; /* Padding for inputs */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 5px; /* Rounded corners */
+    width: 100%; /* Full width */
+    font-size: 16px; /* Font size for inputs */
+    background-color: transparent;
+    text-decoration-color: #e9e9ec;
+}
+
+label {
+    color: #fbf0ee; /* Change this to your desired label color */
+    font-size: 16px; /* Optional: adjust the font size if needed */
+    margin-bottom: 5px; /* Optional: space below the label */
+}
+
+button {
+    height: 50px;
+    width: 100%; /* Full width button */
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background: rgba(140, 226, 217, 0.596); /* Background for the button */
+    border: none; /* No border */
+    border-radius: 25px; /* Rounded corners for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.4s; /* Transition for background color */
+}
+
+button:hover {
+    background: rgba(120, 200, 200, 0.8); /* Darker shade on hover */
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 90%;
+    height: 90%;
+    overflow: auto;
+    background-color: transparent;
+}
+
+.modal-content {
+    background-color: transparent; /* Adjust if needed */
+    margin: 10% auto;
+    padding: 10px;
+    border: 1px solid #888;
+    width: 50%;
+    max-width: 210px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(180, 111, 111);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* container Page Styles */
+.contact-container {
+    background-color: transparent; /* White background with some transparency */
+    padding: 10px;
+    border-radius: 1px;
+    box-shadow: 0 2px 10px rgba(185, 222, 39, 0.2); /* Subtle shadow for depth */
+    width: 400px; /* Fixed width for the container */
+    height: 500px; /* Fixed height for the container, adjust as needed */
+    margin: 5px auto; /* Center horizontally */
+
+    /* Position at the bottom */
+    position: absolute;
+    bottom: 20px;  /* Adjust this value to move it up */
+    left: 50%;  /* Center horizontally */
+    transform: translateX(-50%);  /* Adjust for perfect centering */
+}
+
+
+.contact-container h1 {
+    color: #f8f5f5; /* Darker color for headings */
+    margin-top: 20px;
+    margin-bottom: 5px; /* Space below the heading */
+    text-align: center; /* Center the text */
+}
+
+.contact-container p {
+    color: wheat; /* Grey color for the paragraph */
+    margin-bottom: 1px; /* Space below the paragraph */
+    text-align: center; /* Center the text */
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column; /* Stack the inputs vertically */.contact-form {
+        display: flex;
+        flex-direction: column; /* Align elements vertically */
+        align-items: center; /* Center horizontally */
+        justify-content: center; /* Optional: Center vertically */
+        height: 100%; /* Adjust height as needed */
+        gap: 15px; /* Add spacing between form elements */
+    }
+}
+
+.form-group {
+    margin-bottom: 15px; /* Space between form groups */
+}
+
+label {
+    font-weight: bold; /* Bold labels */
+    margin-bottom: 5px; /* Space below labels */
+    display: block; /* Block display for labels */
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="tel"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    padding: 10px; /* Padding inside input fields */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 1px; /* Rounded corners */
+    width: 100%; /* Full width of the input fields */
+    font-size: 16px; /* Font size */
+    background-color: transparent; /* Transparent background */
+}
+
+label {
+    color: #fbf0ee; /* Change this to your desired label color */
+    font-size: 16px; /* Optional: adjust the font size if needed */
+    margin-bottom: 5px; /* Optional: space below the label */
+}
+
+.container {
+    text-align: center; /* Centers all inline or inline-block elements */
+}
+
+button {
+    height: 30px;
+    width: 100%; /* Full width inside parent */
+    max-width: 400px; /* Optional: Limit max button width */
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background:transparent;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.4s;
+}
+
+button:hover {
+    background: rgba(120, 200, 200, 0.8); /* Darker shade on hover */
+}
+
+
+/* End of New Styles */

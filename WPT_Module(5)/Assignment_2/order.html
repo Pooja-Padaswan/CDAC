@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Page</title>
+    <link rel="stylesheet" href="styleYou.css">
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="navbar">
+            <img class="logo" src="logo.jpeg" alt="Logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a class="active" href="order.html">Order</a></li>
+            </ul>
+        </nav>
+
+        <div class="order-container">
+            <h1>Order Your Products</h1>
+           
+            <form class="order-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="product">Select Product:</label>
+                    <select id="product" name="product" required>
+                        <option value="product1">Product 1</option>
+                        <option value="product2">Product 2</option>
+                        <option value="product3">Product 3</option>
+                        <option value="product4">Product 4</option>
+                        <option value="product5">Product 5</option>
+                        <option value="product6">Product 6</option>
+                        <option value="product7">Product 7</option>
+                        <option value="product8">Product 8</option>
+                        <option value="product9">Product 9</option>
+                        <option value="product10">Product 10</option>
+                        <option value="product11">Product 11</option>
+                        <option value="product12">Product 12</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit Order</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
